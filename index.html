@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nutricap Mushroom | Fresh Mushrooms • Healthy Living • Delicious Recipes</title>
+<meta name="description" content="Fresh mushrooms and delicious mushroom recipes from Nutricap Mushroom.">
+<link rel="stylesheet" href="Style.CSS">
+</head>
+<body>
+<header class="nav" id="top">
+  <a href="#home" class="logo">🍄 NUTRICAP MUSHROOM</a>
+  <nav id="menu" aria-label="Main">
+    <a href="#home">Home</a><a href="#about">About Us</a><a href="#mushrooms">Our Mushrooms</a>
+    <a href="#recipes">Recipes</a><a href="#benefits">Benefits</a><a href="#gallery">Gallery</a><a href="#contact">Contact</a>
+  </nav>
+  <div class="nav-right">
+    <a class="btn btn-sm" href="tel:7228086685">📞 Call Now</a>
+    <a class="icon-btn" href="https://www.instagram.com/nutricap_mushroom_farm/" target="_blank" rel="noopener" aria-label="Instagram">📸</a>
+    <button class="icon-btn burger" id="burger" aria-label="Toggle menu" aria-expanded="false">☰</button>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <span class="float f1">🍃</span><span class="float f2">🍄</span><span class="float f3">🍃</span>
+  <div class="hero-text reveal">
+    <p class="eyebrow">Fresh • Healthy • Delicious</p>
+    <h1>Fresh Mushrooms. Healthy Choices. Delicious Recipes.</h1>
+    <p>Discover fresh, nutritious mushrooms from Nutricap Mushroom and explore delicious ways to enjoy them every day.</p>
+    <div class="cta"><a class="btn" href="#recipes">Explore Recipes</a><a class="btn btn-ghost" href="#contact">Contact Us</a></div>
+    <p class="trust">Fresh • Nutritious • Quality</p>
+  </div>
+  <div class="hero-img reveal" role="img" aria-label="Fresh mushrooms">🍄</div>
+</section>
+
+<section id="mushrooms" class="sec">
+  <h2 class="reveal">Our Fresh Mushrooms</h2>
+  <div class="grid" id="mushGrid"></div>
+</section>
+
+<section id="recipes" class="sec alt">
+  <h2 class="reveal">Delicious Mushroom Recipes</h2>
+  <h3 class="center">What Mushroom Recipe Are You Craving?</h3>
+  <input type="search" id="search" placeholder="Search recipes..." aria-label="Search recipes">
+  <div class="filters" id="filters"></div>
+  <div class="grid" id="recipeGrid" aria-live="polite"></div>
+  <p id="noRes" class="center" hidden>No recipes found. Try another search.</p>
+</section>
+
+<section id="benefits" class="sec">
+  <h2 class="reveal">Why Choose Mushrooms?</h2>
+  <div class="grid four">
+    <div class="card pad reveal"><span class="big">💪</span><h3>Nutritious</h3><p>Mushrooms can be part of a balanced diet.</p></div>
+    <div class="card pad reveal"><span class="big">🌱</span><h3>Naturally Wholesome</h3><p>A versatile ingredient for many meals.</p></div>
+    <div class="card pad reveal"><span class="big">❤️</span><h3>Everyday Food</h3><p>Easy to include in everyday recipes.</p></div>
+    <div class="card pad reveal"><span class="big">🍽️</span><h3>Delicious</h3><p>Works beautifully in curries, pasta, rice, snacks and more.</p></div>
+  </div>
+</section>
+
+<section id="about" class="sec alt">
+  <div class="about">
+    <div class="about-img reveal" role="img" aria-label="Mushroom harvesting">🧑‍🌾</div>
+    <div class="reveal">
+      <h2 class="left">Freshness You Can Trust</h2>
+      <p>Nutricap Mushroom is a mushroom-focused brand dedicated to providing quality mushrooms and helping customers discover delicious ways to prepare them at home.</p>
+      <ul class="ticks"><li>Quality – carefully grown and selected</li><li>Freshness – harvested and delivered fresh</li><li>Hygiene – clean growing and packing</li><li>Nutrition – wholesome everyday food</li><li>Customer satisfaction – always our priority</li></ul>
+    </div>
+  </div>
+</section>
+
+<section id="gallery" class="sec">
+  <h2 class="reveal">Gallery</h2>
+  <div class="filters" id="galFilters"></div>
+  <div class="masonry" id="galGrid"></div>
+</section>
+
+<section id="contact" class="sec alt">
+  <h2 class="reveal">Get Fresh Mushrooms from Nutricap</h2>
+  <div class="contact">
+    <div class="card pad">
+      <p class="big-line">📞 <strong>7228086685</strong></p>
+      <p class="big-line">📸 <strong>Instagram: @nutricap_mushroom_farm</strong></p>
+      <div class="cta"><a class="btn" href="tel:7228086685">Call Now</a><a class="btn btn-ghost" href="https://www.instagram.com/nutricap__mushroom_farm?stkn=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener">Visit Instagram</a></div>
+    </div>
+    <form class="card pad" id="contactForm" novalidate>
+      <label>Name<input id="cName" autocomplete="name"></label>
+      <label>Phone<input id="cPhone" type="tel" autocomplete="tel"></label>
+      <label>Email<input id="cEmail" type="email" autocomplete="email"></label>
+      <label>Message<textarea id="cMsg" rows="4"></textarea></label>
+      <p class="msg" id="formMsg" role="status"></p>
+      <button class="btn" type="submit">Submit</button>
+    </form>
+  </div>
+</section>
+
+<section class="sec">
+  <h2 class="reveal">Follow Nutricap Mushroom</h2>
+  <p class="center">Follow us for fresh mushroom updates, recipes, farming content and more.</p>
+  <p class="center"><strong>@nutricap_mushroom_farm</strong></p>
+  <div class="insta" id="instaGrid"></div>
+  <p class="center"><a class="btn" href="https://www.instagram.com/nutricap_mushroom_farm/" target="_blank" rel="noopener">Follow on Instagram</a></p>
+</section>
+
+<section class="news">
+  <h2>Get Fresh Mushroom Recipes &amp; Updates</h2>
+  <form id="newsForm" novalidate>
+    <input id="nEmail" type="email" placeholder="Enter your email" aria-label="Email">
+    <button class="btn" type="submit">Subscribe</button>
+  </form>
+  <p class="msg" id="newsMsg" role="status"></p>
+</section>
+</main>
+
+<footer class="footer">
+  <div><h3>NUTRICAP MUSHROOM</h3><p>Fresh Mushrooms • Healthy Living • Delicious Recipes</p>
+    <p>📞 <a href="tel:7228086685">7228086685</a><br>📸 @nutricap_mushroom_farm</p></div>
+  <div class="flinks"><a href="#home">Home</a><a href="#about">About</a><a href="#mushrooms">Mushrooms</a><a href="#recipes">Recipes</a><a href="#benefits">Benefits</a><a href="#gallery">Gallery</a><a href="#contact">Contact</a></div>
+  <p class="copy">© 2026 Nutricap Mushroom. All Rights Reserved.</p>
+</footer>
+
+<div class="fab" aria-label="Contact options">
+  <a href="tel:7228086685" class="fab-btn call">📞 Call</a>
+  <a href="https://wa.me/917228086685" target="_blank" rel="noopener" class="fab-btn wa">💬 WhatsApp</a>
+</div>
+<button id="toTop" aria-label="Back to top">↑</button>
+
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="mTitle" hidden>
+  <div class="modal-box">
+    <button class="close" data-close aria-label="Close">✕</button>
+    <div class="m-img" id="mImg"></div>
+    <div class="m-body">
+      <h2 id="mTitle"></h2>
+      <p id="mMeta" class="meta"></p>
+      <div class="servings">Servings
+        <button class="icon-btn" id="sMinus" aria-label="Fewer servings">−</button><b id="sVal">2</b><button class="icon-btn" id="sPlus" aria-label="More servings">+</button>
+      </div>
+      <h3>Ingredients</h3><ul id="mIng" class="checks"></ul>
+      <h3>Cooking Instructions</h3><ol id="mSteps"></ol>
+      <div class="timer"><span id="tDisp">00:00</span>
+        <button class="btn btn-sm" id="tStart">Start</button><button class="btn btn-sm btn-ghost" id="tPause">Pause</button><button class="btn btn-sm btn-ghost" id="tReset">Reset</button></div>
+      <div class="cta"><button class="btn btn-ghost" id="mFav">❤️ Add to Favorites</button><button class="btn" id="mStart">Start Cooking</button></div>
+    </div>
+  </div>
+</div>
+<div class="modal" id="lightbox" hidden><button class="close" data-close aria-label="Close">✕</button><div class="lb" id="lbContent"></div></div>
+
+<script src="Script.JS"></script>
+</body>
+</html>

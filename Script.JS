@@ -25,8 +25,20 @@ const RECIPES = [
   ["Mushroom Stir Fry", "🥗", "Quick, light stir fry with crunchy vegetables.", 10, 8, "Easy", 4.5, "quick easy healthy vegetarian", ["250|g|mushrooms", "1|nos|capsicum", "1|nos|onion", "1|tbsp|soy sauce", "1|tsp|sesame oil"], ["Slice all vegetables evenly.", "Stir-fry on high heat for 5 minutes.", "Add soy sauce and sesame oil.", "Serve hot."]],
   ["Mushroom Curry", "🍜", "Everyday home-style curry with soft mushrooms.", 10, 25, "Easy", 4.6, "easy healthy vegetarian", ["300|g|mushrooms", "2|nos|tomatoes", "1|nos|onion", "1|tsp|turmeric", "2|tsp|curry powder"], ["Sauté onion until soft.", "Add tomatoes and spices.", "Add mushrooms and 1 cup water.", "Simmer 15 minutes and serve with roti or rice."]]
 ];
+const recipeImages = [
+  "photo-1504545102780-26774c1bb073", "photo-1761315413508-1a416a41b9f5", "photo-1621455799534-deab8a1c1d89",
+  "photo-1620582708067-9f6ba1e2fc1c", "photo-1608219992759-8d74ed8d76eb", "photo-1692737580563-7ba2d896f0f6",
+  "photo-1620582708067-9f6ba1e2fc1c", "photo-1761315412830-2f59480377b0", "photo-1761315413508-1a416a41b9f5",
+  "photo-1504545102780-26774c1bb073", "photo-1761315412830-2f59480377b0", "photo-1761315413508-1a416a41b9f5"
+].map(id => "https://images.unsplash.com/" + id + "?auto=format&fit=crop&w=900&q=80");
 const FILTERS = ["All", "Quick", "Easy", "Healthy", "Vegetarian", "Popular", "❤️ Favorites"];
-const GAL = [["Mushroom Farm", "🏡"], ["Fresh Mushrooms", "🍄"], ["Harvesting", "🧺"], ["Packaging", "📦"], ["Mushroom Recipes", "🍽️"], ["Fresh Mushrooms", "🍄"], ["Harvesting", "🧑‍🌾"], ["Mushroom Farm", "🌿"], ["Mushroom Recipes", "🍝"], ["Packaging", "🛍️"]];
+const GAL = [
+  ["Mushroom Farm", "🏡", "photo-1762889278403-1d1a57d9a587"], ["Fresh Mushrooms", "🍄", "photo-1629665001701-a232a0ba4eec"],
+  ["Harvesting", "🧺", "photo-1770429939069-2f649afea536"], ["Packaging", "📦", "photo-1624968665982-84bac2a2821e"],
+  ["Mushroom Recipes", "🍽️", "photo-1608219992759-8d74ed8d76eb"], ["Fresh Mushrooms", "🍄", "photo-1504545102780-26774c1bb073"],
+  ["Harvesting", "🧑‍🌾", "photo-1770884844724-ac9e36b599e9"], ["Mushroom Farm", "🌿", "photo-1621455799534-deab8a1c1d89"],
+  ["Mushroom Recipes", "🍝", "photo-1692737580563-7ba2d896f0f6"], ["Packaging", "🛍️", "photo-1620582708067-9f6ba1e2fc1c"]
+].map(([title, emoji, id]) => [title, emoji, "https://images.unsplash.com/" + id + "?auto=format&fit=crop&w=900&q=80"]);
 
 /* ---------- State ---------- */
 let favs = [];
@@ -47,7 +59,8 @@ function renderRecipes() {
     return okF && r[0].toLowerCase().includes(query);
   });
   $("#recipeGrid").innerHTML = list.map(({ r, i }) => `
-    <article class="card"><div class="thumb" style="${bg(i)}">${r[1]}
+    <article class="card"><div class="thumb" style="${bg(i)}"><span class="thumb-fallback">${r[1]}</span>
+      <img class="thumb-photo" src="${recipeImages[i]}" alt="" loading="lazy" onerror="this.hidden=true">
       <button class="fav" data-fav="${i}" aria-label="Toggle favorite for ${r[0]}">${favs.includes(i) ? "❤️" : "🤍"}</button></div>
     <div class="body"><h3>${r[0]}</h3><p>${r[2]}</p>
     <div class="row"><span class="tag">⏱ ${r[3] + r[4]} min</span><span class="tag">${r[5]}</span><span class="tag">⭐ ${r[6]}</span></div>
@@ -116,7 +129,7 @@ const cats = ["All", ...new Set(GAL.map(g => g[0]))];
 $("#galFilters").innerHTML = cats.map((c, i) => `<button class="${i ? "" : "on"}">${c}</button>`).join("");
 function renderGal(c = "All") {
   $("#galGrid").innerHTML = GAL.map((g, i) => ({ g, i })).filter(({ g }) => c === "All" || g[0] === c).map(({ g, i }) =>
-    `<button class="g-item" data-g="${i}" style="${bg(i)};height:${[170, 230, 200][i % 3]}px" aria-label="Open ${g[0]}">${g[1]}<span>${g[0]}</span></button>`).join("");
+    `<button class="g-item" data-g="${i}" style="${bg(i)};height:${[170, 230, 200][i % 3]}px" aria-label="Open ${g[0]}"><span class="g-fallback">${g[1]}</span><img class="gallery-photo" src="${g[2]}" alt="" loading="lazy" onerror="this.hidden=true"><span class="g-caption">${g[0]}</span></button>`).join("");
 }
 renderGal();
 $("#galFilters").addEventListener("click", e => {
@@ -127,7 +140,7 @@ $("#galFilters").addEventListener("click", e => {
 $("#galGrid").addEventListener("click", e => {
   const b = e.target.closest("[data-g]"); if (!b) return;
   const i = +b.dataset.g;
-  $("#lbContent").innerHTML = `<div class="g-item" style="${bg(i)}">${GAL[i][1]}<span>${GAL[i][0]}</span></div>`;
+  $("#lbContent").innerHTML = `<div class="g-item gallery-lightbox" style="${bg(i)}"><span class="g-fallback">${GAL[i][1]}</span><img class="gallery-photo" src="${GAL[i][2]}" alt="${GAL[i][0]}"><span class="g-caption">${GAL[i][0]}</span></div>`;
   $("#lightbox").hidden = false; document.body.style.overflow = "hidden";
 });
 $("#instaGrid").innerHTML = ["🍄", "🍝", "🧺", "🍛", "🌿", "🍕"].map((e, i) => `<div style="${bg(i + 2)}">${e}</div>`).join("");

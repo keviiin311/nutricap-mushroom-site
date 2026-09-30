@@ -23,14 +23,24 @@ const RECIPES = [
   ["Mushroom Biryani", "🍲", "Fragrant layered rice with spiced mushrooms.", 25, 35, "Hard", 4.9, "vegetarian popular", ["1|cup|basmati rice", "250|g|mushrooms", "1|cup|curd", "2|tsp|biryani masala", "2|nos|onions, fried"], ["Marinate mushrooms with curd and masala.", "Par-boil the rice with whole spices.", "Layer mushrooms, rice and fried onions.", "Cover and cook on low heat for 20 minutes."]],
   ["Mushroom Sandwich", "🥪", "Toasty sandwich with a savoury mushroom filling.", 10, 10, "Easy", 4.4, "quick easy vegetarian", ["4|slices|bread", "150|g|mushrooms, chopped", "1|tbsp|butter", "1|nos|onion, chopped", "1|tsp|pepper"], ["Sauté onion and mushrooms until dry.", "Season with salt and pepper.", "Fill the bread slices.", "Toast until golden and crisp."]],
   ["Mushroom Stir Fry", "🥗", "Quick, light stir fry with crunchy vegetables.", 10, 8, "Easy", 4.5, "quick easy healthy vegetarian", ["250|g|mushrooms", "1|nos|capsicum", "1|nos|onion", "1|tbsp|soy sauce", "1|tsp|sesame oil"], ["Slice all vegetables evenly.", "Stir-fry on high heat for 5 minutes.", "Add soy sauce and sesame oil.", "Serve hot."]],
-  ["Mushroom Curry", "🍜", "Everyday home-style curry with soft mushrooms.", 10, 25, "Easy", 4.6, "easy healthy vegetarian", ["300|g|mushrooms", "2|nos|tomatoes", "1|nos|onion", "1|tsp|turmeric", "2|tsp|curry powder"], ["Sauté onion until soft.", "Add tomatoes and spices.", "Add mushrooms and 1 cup water.", "Simmer 15 minutes and serve with roti or rice."]]
+  ["Mushroom Curry", "🍜", "Everyday home-style curry with soft mushrooms.", 10, 25, "Easy", 4.6, "easy healthy vegetarian", ["300|g|mushrooms", "2|nos|tomatoes", "1|nos|onion", "1|tsp|turmeric", "2|tsp|curry powder"], ["Sauté onion until soft.", "Add tomatoes and spices.", "Add mushrooms and 1 cup water.", "Simmer 15 minutes and serve with roti or rice."]],
+  ["Mushroom Matar Masala", "🍛", "Tender mushrooms and green peas in a spiced tomato gravy.", 10, 20, "Medium", 4.8, "healthy vegetarian popular", ["250|g|mushrooms", "1|cup|green peas", "2|nos|onions, chopped", "2|nos|tomatoes, puréed", "2|tsp|garam masala"], ["Heat oil and soften the onions.", "Add tomato purée and spices; cook until thick.", "Stir in mushrooms, peas and a splash of water.", "Cover and simmer until tender; garnish with coriander."]]
 ];
 const recipeImages = [
-  "photo-1504545102780-26774c1bb073", "photo-1761315413508-1a416a41b9f5", "photo-1621455799534-deab8a1c1d89",
-  "photo-1620582708067-9f6ba1e2fc1c", "photo-1608219992759-8d74ed8d76eb", "photo-1692737580563-7ba2d896f0f6",
-  "photo-1620582708067-9f6ba1e2fc1c", "photo-1761315412830-2f59480377b0", "photo-1761315413508-1a416a41b9f5",
-  "photo-1504545102780-26774c1bb073", "photo-1761315412830-2f59480377b0", "photo-1761315413508-1a416a41b9f5"
-].map(id => "https://images.unsplash.com/" + id + "?auto=format&fit=crop&w=900&q=80");
+  "assets/recipes/01-garlic-butter.jpeg",
+  "assets/recipes/12-mushroom-masala-rich.jpeg",
+  "assets/recipes/03-chilli-mushroom.jpeg",
+  "https://images.unsplash.com/photo-1620582708067-9f6ba1e2fc1c?auto=format&fit=crop&w=900&q=80",
+  "assets/recipes/05-creamy-pasta.jpeg",
+  "assets/recipes/06-mushroom-pizza.jpeg",
+  "assets/recipes/07-mushroom-soup.jpeg",
+  "assets/recipes/08-mushroom-tikka.jpeg",
+  "assets/recipes/09-mushroom-biryani.jpeg",
+  "assets/recipes/10-mushroom-patty.jpeg",
+  "assets/recipes/11-mushroom-stir-fry.jpeg",
+  "assets/recipes/02-mushroom-masala.jpeg",
+  "assets/recipes/04-matar-masala.jpeg"
+];
 const FILTERS = ["All", "Quick", "Easy", "Healthy", "Vegetarian", "Popular", "❤️ Favorites"];
 const GAL = [
   ["Mushroom Farm", "🏡", "photo-1762889278403-1d1a57d9a587"], ["Fresh Mushrooms", "🍄", "photo-1629665001701-a232a0ba4eec"],

@@ -61,6 +61,11 @@ h2.left{text-align:left}
 .big-line{font-size:1.1rem;margin-bottom:.8rem}
 form label{display:block;font-weight:600;margin-bottom:.8rem}
 form input,form textarea{display:block;width:100%;padding:.7rem 1rem;border:2px solid var(--beige);border-radius:12px;font:inherit;margin-top:.3rem}
+.rating-field{border:0;padding:0;margin:0 0 .8rem}.rating-field legend{font-weight:600;margin-bottom:.3rem}
+.rating-options{display:flex;gap:.2rem}.rating-options input{position:absolute;width:1px;height:1px;opacity:0}
+.rating-options label{font-size:1.8rem;line-height:1;color:#9a927f;cursor:pointer;margin:0}
+.rating-options label.selected,.rating-options label:hover{color:var(--gold)}
+.rating-options input:focus-visible+label{outline:3px solid var(--green2);outline-offset:2px}
 .msg{min-height:1.4rem;font-weight:600;margin:.4rem 0}.msg.ok{color:var(--green2)}.msg.err{color:#b3261e}
 .insta{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:.6rem;max-width:900px;margin:1.5rem auto}
 .insta div{aspect-ratio:1;border-radius:14px;display:grid;place-items:center;font-size:3rem}

@@ -5,10 +5,7 @@ const bg = i => `background:linear-gradient(135deg,${grads[i % grads.length]})`;
 
 /* ---------- Data ---------- */
 const MUSH = [
-  ["🍄", "Oyster Mushroom", "Fresh, nutritious and perfect for everyday cooking.", "Protein • Fibre • B-vitamins"],
-  ["🍄", "Button Mushroom", "A versatile mushroom for curries, pizzas, pasta and snacks.", "Low calorie • Potassium • Fibre"],
-  ["🍄", "Milky Mushroom", "Delicious texture with a naturally rich flavor.", "Protein • Minerals • Fibre"],
-  ["🍄", "Other Varieties", "Seasonal and speciality varieties — ask us what is fresh today.", "Customizable • Seasonal"]
+  ["🍄", "Oyster Mushroom", "Fresh, nutritious and perfect for everyday cooking.", "Protein • Fibre • B-vitamins"]
 ];
 // [name, emoji, desc, prep, cook, difficulty, rating, tags, ingredients "qty|unit|name", steps]
 const RECIPES = [
@@ -73,7 +70,7 @@ function renderRecipes() {
       <img class="thumb-photo" src="${recipeImages[i]}" alt="" loading="lazy" onerror="this.hidden=true">
       <button class="fav" data-fav="${i}" aria-label="Toggle favorite for ${r[0]}">${favs.includes(i) ? "❤️" : "🤍"}</button></div>
     <div class="body"><h3>${r[0]}</h3><p>${r[2]}</p>
-    <div class="row"><span class="tag">⏱ ${r[3] + r[4]} min</span><span class="tag">${r[5]}</span><span class="tag">⭐ ${r[6]}</span></div>
+    <div class="row"><span class="tag">⏱ ${r[3] + r[4]} min</span><span class="tag">${r[5]}</span></div>
     <button class="btn btn-sm" data-view="${i}">View Recipe</button></div></article>`).join("");
   $("#noRes").hidden = list.length > 0;
 }
@@ -110,7 +107,7 @@ function openRecipe(i) {
   current = i; servings = 2; const r = RECIPES[i];
   $("#mImg").style.cssText = bg(i); $("#mImg").textContent = r[1];
   $("#mTitle").textContent = r[0];
-  $("#mMeta").textContent = `⭐ ${r[6]} • Prep ${r[3]} min • Cook ${r[4]} min • Total ${r[3] + r[4]} min • ${r[5]}`;
+  $("#mMeta").textContent = `Prep ${r[3]} min • Cook ${r[4]} min • Total ${r[3]+r[4]} min • ${r[5]}`;
   $("#mSteps").innerHTML = r[9].map(s => `<li>${s}</li>`).join("");
   renderIngredients(); updateFavBtn(); resetTimer();
   modal.hidden = false; document.body.style.overflow = "hidden";
@@ -158,23 +155,16 @@ $("#instaGrid").innerHTML = ["🍄", "🍝", "🧺", "🍛", "🌿", "🍕"].map
 /* ---------- Forms ---------- */
 const emailOk = v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
 function say(el, text, ok) { el.textContent = text; el.className = "msg " + (ok ? "ok" : "err"); }
-document.querySelectorAll('input[name="siteRating"]').forEach(input => input.addEventListener("change", () => {
-  const rating = Number(input.value);
-  document.querySelectorAll(".rating-options label").forEach((star, index) => star.classList.toggle("selected", index < rating));
-}));
 $("#contactForm").addEventListener("submit", e => {
   e.preventDefault();
-  const n = $("#cName").value.trim(), p = $("#cPhone").value.replace(/\D/g, ""), em = $("#cEmail").value.trim(), m = $("#cMsg").value.trim(), rating = $("input[name='siteRating']:checked")?.value, out = $("#formMsg");
+  const n = $("#cName").value.trim(), p = $("#cPhone").value.replace(/\D/g, ""), em = $("#cEmail").value.trim(), m = $("#cMsg").value.trim(), out = $("#formMsg");
   if (n.length < 2) return say(out, "Please enter your name.");
   if (p.length < 10) return say(out, "Please enter a valid 10-digit phone number.");
   if (!emailOk(em)) return say(out, "Please enter a valid email address.");
   if (m.length < 5) return say(out, "Please write a short message.");
-  if (!rating) return say(out, "Please select a website rating.");
-  const message = ["Fresh mushroom enquiry from the Nutricap website", "Name: " + n, "Phone: " + p, "Email: " + em, "Website rating: " + rating + "/5", "Message: " + m].join("\n");
-  const waUrl = "https://wa.me/917228086685?text=" + encodeURIComponent(message);
-  window.open(waUrl, "_blank", "noopener,noreferrer");
-  say(out, "Your message and rating are ready to send in WhatsApp.", true); e.target.reset();
-  document.querySelectorAll(".rating-options label").forEach(star => star.classList.remove("selected"));
+  const message = ["Fresh mushroom enquiry from the Nutricap website", "Name: " + n, "Phone: " + p, "Email: " + em, "Message: " + m].join("\n");
+  window.open("https://wa.me/917228086685?text=" + encodeURIComponent(message), "_blank", "noopener,noreferrer");
+  say(out, "Your message is ready to send in WhatsApp.", true); e.target.reset();
 });
 $("#newsForm").addEventListener("submit", e => {
   e.preventDefault();

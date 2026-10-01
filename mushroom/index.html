@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nutricap Mushroom | Fresh Mushrooms • Healthy Living • Delicious Recipes</title>
+<meta name="description" content="Fresh mushrooms and delicious mushroom recipes from Nutricap Mushroom.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,800;9..144,900&family=Nunito+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="Style.CSS">
+</head>
+<body>
+<header class="nav" id="top">
+  <a href="#home" class="logo"><span>🍄 NUTRICAP</span><span>MUSHROOM</span></a>
+  <nav id="menu" aria-label="Main">
+    <a href="#home">Home</a><a href="#about">About Us</a><a href="#mushrooms">Our Mushrooms</a>
+    <a href="#recipes">Recipes</a><a href="#benefits">Benefits</a><a href="#gallery">Gallery</a><a href="#contact">Contact</a>
+  </nav>
+  <div class="nav-right">
+    <a class="btn btn-sm" href="tel:7228086685">📞 Call Now</a>
+    <a class="icon-btn" href="https://www.instagram.com/nutricap_mushroom_farm/" target="_blank" rel="noopener" aria-label="Instagram">📸</a>
+    <button class="icon-btn burger" id="burger" aria-label="Toggle menu" aria-expanded="false">☰</button>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <span class="float f1">🍃</span><span class="float f2">🍄</span><span class="float f3">🍃</span>
+  <div class="hero-text reveal">
+    <p class="eyebrow">Fresh from our farm</p>
+    <h1>Fresh mushrooms<br>for every table</h1>
+    <p>Freshly grown mushrooms, delicious recipes and natural goodness from Nutricap Mushroom.</p>
+    <div class="cta"><a class="btn" href="#mushrooms">Explore Mushrooms</a><a class="btn btn-ghost" href="#recipes">Discover Recipes</a></div>
+    <p class="trust">Healthy <span>•</span> Natural <span>•</span> Delicious</p>
+  </div>
+  <div class="hero-visual reveal">
+    <img class="hero-img" src="https://images.unsplash.com/photo-1629665001701-a232a0ba4eec?auto=format&amp;fit=crop&amp;w=1100&amp;q=85" alt="Fresh mushrooms ready for the kitchen">
+    <img class="hero-overlap hero-overlap-top" src="assets/recipes/05-creamy-pasta.jpeg" alt="Creamy mushroom pasta">
+    <img class="hero-overlap hero-overlap-bottom" src="assets/recipes/04-matar-masala.jpeg" alt="Mushroom matar masala">
+    <span class="hero-badge">100%<small>Farm fresh</small></span>
+    <span class="hero-note">Fresh from farm<br>Made for your table</span>
+    <span class="hero-roundel">Healthy • Natural<br>• Delicious</span>
+  </div>
+</section>
+
+<section class="feature-strip" aria-label="Nutricap Mushroom qualities">
+  <article class="feature-note note-pink"><span class="feature-number">01</span><div><h2>Fresh from farm</h2><p>Carefully grown mushrooms prepared with freshness and quality in mind.</p></div><img class="feature-photo" src="https://images.unsplash.com/photo-1770884844724-ac9e36b599e9?auto=format&amp;fit=crop&amp;w=180&amp;q=80" alt="Fresh oyster mushrooms" loading="lazy"></article>
+  <article class="feature-note note-yellow"><span class="feature-number">02</span><div><h2>Naturally delicious</h2><p>Perfect for curries, pasta, pizza, rice and everyday meals.</p></div><img class="feature-photo" src="assets/recipes/05-creamy-pasta.jpeg" alt="Creamy mushroom pasta" loading="lazy"></article>
+  <article class="feature-note note-green"><span class="feature-number">03</span><div><h2>Quality you can trust</h2><p>Fresh mushrooms with careful cultivation and handling.</p></div><img class="feature-photo" src="https://images.unsplash.com/photo-1621455799534-deab8a1c1d89?auto=format&amp;fit=crop&amp;w=180&amp;q=80" alt="Freshly picked mushrooms" loading="lazy"></article>
+  <article class="feature-note note-beige"><span class="feature-number">04</span><div><h2>Made for your table</h2><p>Discover simple and delicious ways to enjoy mushrooms.</p></div><img class="feature-photo" src="assets/recipes/01-garlic-butter.jpeg" alt="Garlic butter mushrooms" loading="lazy"></article>
+</section>
+
+<div class="ribbon-band ribbon-band-one" aria-hidden="true">
+  <svg class="mushroom-ribbon" viewBox="0 0 2200 420" preserveAspectRatio="none" focusable="false">
+    <defs>
+      <path id="ribbonPathOne" d="M -200 200 C 20 35, 240 25, 420 200 S 840 350, 1060 190 S 1430 20, 1680 205 S 2010 365, 2280 200"/>
+      <g id="ribbonArtworkOne"><use href="#ribbonPathOne" class="ribbon-track"/><text class="ribbon-print"><textPath href="#ribbonPathOne">FRESH MUSHROOMS • FARM TO TABLE • NATURAL GOODNESS • DELICIOUS RECIPES • QUALITY YOU CAN TRUST • FRESH MUSHROOMS • FARM TO TABLE • NATURAL GOODNESS • DELICIOUS RECIPES • QUALITY YOU CAN TRUST •</textPath></text></g>
+    </defs>
+    <g class="ribbon-flow">
+      <use href="#ribbonArtworkOne"/><use href="#ribbonArtworkOne" x="2480"/>
+      <animateTransform attributeName="transform" type="translate" from="0 0" to="-2480 0" dur="18s" calcMode="linear" repeatCount="indefinite"/>
+    </g>
+  </svg>
+</div>
+
+<section id="mushrooms" class="sec">
+  <p class="section-kicker reveal">Naturally grown, freshly picked</p>
+  <h2 class="reveal">Our Mushrooms</h2>
+  <div class="product-catalog">
+    <div class="grid" id="mushGrid" aria-live="polite"></div>
+  </div>
+</section>
+
+<div class="ribbon-band ribbon-band-two" aria-hidden="true">
+  <svg class="mushroom-ribbon" viewBox="0 0 2200 360" preserveAspectRatio="none" focusable="false">
+    <defs>
+      <path id="ribbonPathTwo" d="M -200 180 C 20 300, 220 25, 430 125 S 830 320, 1060 145 S 1450 25, 1660 180 S 2010 40, 2280 180"/>
+      <g id="ribbonArtworkTwo"><use href="#ribbonPathTwo" class="ribbon-track"/><text class="ribbon-print"><textPath href="#ribbonPathTwo">FRESH MUSHROOMS • HEALTHY LIVING • DELICIOUS RECIPES • NUTRICAP MUSHROOM • FRESH MUSHROOMS • HEALTHY LIVING • DELICIOUS RECIPES • NUTRICAP MUSHROOM •</textPath></text></g>
+    </defs>
+    <g class="ribbon-flow">
+      <use href="#ribbonArtworkTwo"/><use href="#ribbonArtworkTwo" x="2480"/>
+      <animateTransform attributeName="transform" type="translate" from="0 0" to="-2480 0" dur="20s" calcMode="linear" repeatCount="indefinite"/>
+    </g>
+  </svg>
+</div>
+
+<section id="care" class="sec care-section">
+  <p class="section-kicker reveal">Why Nutricap?</p>
+  <h2 class="reveal detail-heading">We take care<br><span class="detail-heading-accent">of every mushroom.</span></h2>
+  <div class="grid four detail-grid">
+    <article class="detail-card detail-purple reveal"><span class="detail-number">01</span><img class="detail-photo" src="https://images.unsplash.com/photo-1770884844724-ac9e36b599e9?auto=format&amp;fit=crop&amp;w=320&amp;q=85" alt="Freshly grown oyster mushrooms" loading="lazy"><h3>Freshly grown</h3><p>Fresh mushrooms cultivated with care.</p><span class="detail-stamp">FRESH</span></article>
+    <article class="detail-card detail-coral reveal"><span class="detail-number">02</span><span class="big">🌱</span><h3>Quality first</h3><p>Careful cultivation and handling from farm to table.</p><span class="detail-stamp">QUALITY</span></article>
+    <article class="detail-card detail-pink reveal"><span class="detail-number">03</span><img class="detail-photo" src="assets/recipes/05-creamy-pasta.jpeg" alt="A mushroom pasta recipe" loading="lazy"><h3>Delicious ideas</h3><p>Creative mushroom recipes for every occasion.</p><span class="detail-stamp">DELICIOUS</span></article>
+    <article class="detail-card detail-yellow reveal"><span class="detail-number">04</span><span class="big">🧺</span><h3>Fresh for you</h3><p>Discover the goodness of fresh mushrooms.</p><span class="detail-stamp">FROM FARM</span></article>
+  </div>
+</section>
+
+<section id="recipes" class="sec alt">
+  <svg class="recipe-swoop reveal" viewBox="0 0 260 54" aria-hidden="true"><path d="M4 42 C58 4 118 4 158 31 S225 51 256 12"/></svg>
+  <p class="section-kicker reveal">From quick bites to family favourites</p>
+  <h2 class="reveal">Recipes made<br>with fresh mushrooms</h2>
+  <h3 class="center">What mushroom recipe are you craving?</h3>
+  <input type="search" id="search" placeholder="Search recipes..." aria-label="Search recipes">
+  <div class="filters" id="filters"></div>
+  <div class="grid" id="recipeGrid" aria-live="polite"></div>
+  <p id="noRes" class="center" hidden>No recipes found. Try another search.</p>
+</section>
+
+<section id="benefits" class="sec benefits-section">
+  <p class="section-kicker reveal">Goodness in every bite</p>
+  <h2 class="reveal">Why mushrooms?</h2>
+  <div class="grid four benefit-grid">
+    <article class="benefit-card benefit-pink reveal"><span class="big">🌿</span><h3>Nutritious</h3><p>A tasty way to add variety to everyday meals.</p></article>
+    <article class="benefit-card benefit-yellow reveal"><span class="big">🍳</span><h3>Versatile</h3><p>At home in curries, pasta, rice, pizza and snacks.</p></article>
+    <article class="benefit-card benefit-green reveal"><span class="big">🍄</span><h3>Delicious</h3><p>Rich, savory flavor makes every dish more satisfying.</p></article>
+    <article class="benefit-card benefit-beige reveal"><span class="big">🥗</span><h3>Everyday goodness</h3><p>Easy to enjoy in meals shared with family and friends.</p></article>
+  </div>
+</section>
+
+<div class="ribbon-band ribbon-band-three" aria-hidden="true">
+  <svg class="mushroom-ribbon" viewBox="0 0 2300 430" preserveAspectRatio="none" focusable="false">
+    <defs>
+      <path id="ribbonPathThree" d="M -200 190 C 30 25, 260 25, 440 195 S 850 350, 1080 185 S 1450 25, 1680 195 S 2020 355, 2280 190"/>
+      <g id="ribbonArtworkThree"><use href="#ribbonPathThree" class="ribbon-track"/><text class="ribbon-print"><textPath href="#ribbonPathThree">FRESH MUSHROOMS • FARM TO TABLE • NATURAL GOODNESS • DELICIOUS RECIPES • QUALITY YOU CAN TRUST • FRESH MUSHROOMS • FARM TO TABLE • NATURAL GOODNESS • DELICIOUS RECIPES • QUALITY YOU CAN TRUST •</textPath></text></g>
+    </defs>
+    <g class="ribbon-flow">
+      <use href="#ribbonArtworkThree"/><use href="#ribbonArtworkThree" x="2480"/>
+      <animateTransform attributeName="transform" type="translate" from="0 0" to="-2480 0" dur="22s" calcMode="linear" repeatCount="indefinite"/>
+    </g>
+  </svg>
+</div>
+
+<section id="about" class="sec alt">
+  <div class="about">
+    <div class="about-photos reveal">
+      <img class="about-img about-main" src="https://images.unsplash.com/photo-1770429939069-2f649afea536?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Fresh oyster mushrooms being harvested">
+      <img class="about-img about-inset" src="assets/recipes/01-garlic-butter.jpeg" alt="Garlic butter mushrooms ready to serve">
+      <img class="about-img about-thumb" src="https://images.unsplash.com/photo-1621455799534-deab8a1c1d89?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Freshly picked mushrooms">
+      <span class="about-sticker">Fresh<br>with care</span>
+    </div>
+    <div class="reveal">
+      <p class="section-kicker">From our farm</p>
+      <h2 class="left">From our farm<br>to your table.</h2>
+      <p>Nutricap Mushroom brings fresh, quality mushrooms closer to your kitchen. We focus on careful cultivation, freshness and delicious ways to enjoy mushrooms every day.</p>
+      <p class="owner-line">Founded and owned by <strong>Krish Tandel</strong>.</p>
+      <ul class="ticks"><li>Quality – carefully grown and selected</li><li>Freshness – harvested and delivered fresh</li><li>Hygiene – clean growing and packing</li><li>Nutrition – wholesome everyday food</li><li>Customer satisfaction – always our priority</li></ul>
+    </div>
+  </div>
+</section>
+
+<section id="gallery" class="sec">
+  <p class="section-kicker reveal">From farm to table</p>
+  <h2 class="reveal">Gallery</h2>
+  <div class="filters" id="galFilters"></div>
+  <div class="masonry" id="galGrid"></div>
+</section>
+
+<section class="final-cta">
+  <div class="final-cta-copy"><p class="section-kicker">Straight from Nutricap</p><h2>Ready for<br>fresh mushrooms?</h2><p>Bring fresh, delicious mushrooms to your kitchen.</p><div class="cta"><a class="btn" href="tel:7228086685">Call Now</a><a class="btn btn-ghost" href="https://www.instagram.com/nutricap_mushroom_farm/" target="_blank" rel="noopener">Instagram</a></div></div>
+  <img src="assets/recipes/02-mushroom-masala.jpeg" alt="Fresh mushroom masala ready for a family meal">
+  <span class="cta-sticker">Farm<br>fresh</span>
+</section>
+
+<section id="contact" class="sec alt">
+  <p class="section-kicker reveal">Let's connect</p>
+  <h2 class="reveal">Get fresh mushrooms<br>from Nutricap.</h2>
+  <div class="contact">
+    <div class="card pad">
+      <p class="big-line">📞 <strong>7228086685</strong></p>
+      <p class="big-line">📸 <strong>Instagram: @nutricap_mushroom_farm</strong></p>
+      <div class="cta"><a class="btn" href="tel:7228086685">Call Now</a><a class="btn btn-ghost" href="https://www.instagram.com/nutricap_mushroom_farm/" target="_blank" rel="noopener">Visit Instagram</a></div>
+    </div>
+    <form class="card pad" id="contactForm" novalidate>
+      <label>Name<input id="cName" autocomplete="name"></label>
+      <label>Phone<input id="cPhone" type="tel" autocomplete="tel"></label>
+      <label>Email<input id="cEmail" type="email" autocomplete="email"></label>
+      <label>Message<textarea id="cMsg" rows="4"></textarea></label>
+      <p class="msg" id="formMsg" role="status"></p>
+      <button class="btn" type="submit">Send via WhatsApp</button>
+    </form>
+  </div>
+</section>
+
+<section class="sec">
+  <h2 class="reveal">Follow Nutricap Mushroom</h2>
+  <p class="center">Follow us for fresh mushroom updates, recipes, farming content and more.</p>
+  <p class="center"><strong>@nutricap_mushroom_farm</strong></p>
+  <div class="insta" id="instaGrid"></div>
+  <p class="center"><a class="btn" href="https://www.instagram.com/nutricap_mushroom_farm/" target="_blank" rel="noopener">Follow on Instagram</a></p>
+</section>
+
+<section class="news">
+  <h2>Get Fresh Mushroom Recipes &amp; Updates</h2>
+  <form id="newsForm" novalidate>
+    <input id="nEmail" type="email" placeholder="Enter your email" aria-label="Email">
+    <button class="btn" type="submit">Subscribe</button>
+  </form>
+  <p class="msg" id="newsMsg" role="status"></p>
+</section>
+</main>
+
+<footer class="footer">
+  <div><h3>NUTRICAP MUSHROOM</h3><p>Fresh Mushrooms • Healthy Living • Delicious Recipes</p><p>Owned by Krish Tandel</p>
+    <p>📞 <a href="tel:7228086685">7228086685</a><br>📸 @nutricap_mushroom_farm</p></div>
+  <div class="flinks"><a href="#home">Home</a><a href="#about">About</a><a href="#mushrooms">Mushrooms</a><a href="#recipes">Recipes</a><a href="#benefits">Benefits</a><a href="#gallery">Gallery</a><a href="#contact">Contact</a></div>
+  <p class="copy">© 2026 Nutricap Mushroom. All Rights Reserved.</p>
+</footer>
+
+<div class="fab" aria-label="Contact options">
+  <a href="tel:7228086685" class="fab-btn call">📞 Call</a>
+  <a href="https://wa.me/917228086685" target="_blank" rel="noopener" class="fab-btn wa">💬 WhatsApp</a>
+</div>
+<button id="toTop" aria-label="Back to top">↑</button>
+
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="mTitle" hidden>
+  <div class="modal-box">
+    <button class="close" data-close aria-label="Close">✕</button>
+    <div class="m-img" id="mImg"></div>
+    <div class="m-body">
+      <h2 id="mTitle"></h2>
+      <p id="mMeta" class="meta"></p>
+      <div class="servings">Servings
+        <button class="icon-btn" id="sMinus" aria-label="Fewer servings">−</button><b id="sVal">2</b><button class="icon-btn" id="sPlus" aria-label="More servings">+</button>
+      </div>
+      <h3>Ingredients</h3><ul id="mIng" class="checks"></ul>
+      <h3>Cooking Instructions</h3><ol id="mSteps"></ol>
+      <div class="timer"><span id="tDisp">00:00</span>
+        <button class="btn btn-sm" id="tStart">Start</button><button class="btn btn-sm btn-ghost" id="tPause">Pause</button><button class="btn btn-sm btn-ghost" id="tReset">Reset</button></div>
+      <div class="cta"><button class="btn btn-ghost" id="mFav">❤️ Add to Favorites</button><button class="btn" id="mStart">Start Cooking</button></div>
+    </div>
+  </div>
+</div>
+<div class="modal" id="lightbox" hidden><button class="close" data-close aria-label="Close">✕</button><div class="lb" id="lbContent"></div></div>
+
+<script src="Script.JS?v=3"></script>
+</body>
+</html>

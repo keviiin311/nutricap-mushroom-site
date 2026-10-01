@@ -173,4 +173,10 @@ window.addEventListener("scroll", () => toTop.classList.toggle("show", scrollY >
 const io = "IntersectionObserver" in window ? new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); } }), { threshold: .12 }) : null;
 document.querySelectorAll(".reveal").forEach(el => io ? io.observe(el) : el.classList.add("in"));
 
+const formatCurrentDate = (date = new Date()) => new Intl.DateTimeFormat("en-GB", { day: "2-digit", month: "long", year: "numeric" }).format(date);
+const todayDate = document.getElementById("todayDate");
+if (todayDate) todayDate.textContent = formatCurrentDate();
+const copyrightYear = document.getElementById("copyrightYear");
+if (copyrightYear) copyrightYear.textContent = new Date().getFullYear();
+
 renderRecipes();

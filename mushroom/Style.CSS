@@ -66,14 +66,16 @@ h2.left{text-align:left}
 .float{position:absolute;font-size:2rem;opacity:.5;animation:fl 6s ease-in-out infinite}
 .f1{top:12%;left:45%}.f2{bottom:10%;left:8%;animation-delay:1s}.f3{top:65%;right:6%;animation-delay:2s}
 @keyframes fl{50%{transform:translateY(-18px) rotate(12deg)}}
-.ribbon-band{position:relative;z-index:8;width:120%;left:-10%;overflow:hidden;clip-path:inset(0 0 round 0);contain:paint;pointer-events:none}
-.ribbon-band-one{margin:-55px 0 -88px}
-.ribbon-band-two{margin:0 0 -44px;z-index:6}
-.ribbon-band-three{margin:-12px 0 0;z-index:4}
-.mushroom-ribbon{display:block;width:140%;height:auto;margin-left:-15%;overflow:visible}
-.ribbon-flow{will-change:transform}
-.ribbon-track{fill:none;stroke:#f4d95b;stroke-width:104;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 10px 12px rgba(65,46,26,.12))}
-.ribbon-print{fill:#3a2b24;font-family:"Fraunces",Georgia,serif;font-size:26px;font-weight:900;letter-spacing:0}
+.ribbon-section{position:relative;z-index:8;width:100%;overflow:hidden;contain:paint;pointer-events:none;line-height:0;margin:clamp(2rem,6vw,5rem) 0}
+.ribbon-section-1{margin-top:clamp(3rem,8vw,7rem)}
+.ribbon-section-2{margin-top:clamp(4rem,10vw,9rem)}
+.ribbon-section-3{margin-top:clamp(4rem,10vw,9rem)}
+.ribbon-track{display:flex;width:200%;animation:ribbonFlow 18s linear infinite;will-change:transform}
+.ribbon-svg{display:block;flex:0 0 50%;width:50%;height:clamp(110px,20vw,220px);overflow:visible}
+.ribbon-curve{fill:none;stroke:#F4D95B;stroke-width:84;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 10px 12px rgba(65,46,26,.12))}
+.ribbon-print{fill:#3a2b24;font-family:"Fraunces",Georgia,serif;font-size:27px;font-weight:900;letter-spacing:.04em}
+
+@keyframes ribbonFlow{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 #mushrooms h2{position:relative;z-index:9}
 .feature-strip{position:relative;z-index:4;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;width:min(1320px,calc(100% - 48px));margin:34px auto 82px}
 .feature-note{position:relative;display:flex;align-items:flex-start;gap:12px;min-height:148px;padding:22px 18px;border:1px solid rgba(107,73,53,.08);border-radius:24px;box-shadow:var(--sh)}
@@ -225,9 +227,10 @@ ol{padding-left:1.3rem}ol li{margin-bottom:.5rem}
  .about-photos{min-height:390px}.about-sticker{left:52%;bottom:35%;width:78px;height:78px;font-size:.68rem}
  .final-cta{grid-template-columns:1fr;text-align:center;padding:3.5rem 7vw}.final-cta h2{text-align:center}.final-cta-copy>p:not(.section-kicker){margin-left:auto;margin-right:auto}.final-cta img{width:min(85%,420px);justify-self:center}.cta-sticker{right:9%;top:auto;bottom:42%;width:70px;height:70px}
 @media(max-width:520px){.feature-strip{grid-template-columns:1fr}.feature-note{min-height:112px}.detail-heading{margin-bottom:2rem}.detail-card{min-height:300px;padding-bottom:78px}#recipes h2{font-size:clamp(2.5rem,12vw,3.5rem)}#mushGrid{grid-template-columns:1fr}.product-photo{height:230px}.about-photos{min-height:320px}.about-main{width:78%;height:76%}.about-inset{width:50%;height:45%}.about-thumb{width:34%;height:27%}}
- .ribbon-band{margin-top:-30px;margin-bottom:-82px}
- .ribbon-print{font-size:42px}
+ .ribbon-section{margin-top:3rem;margin-bottom:3rem}
+ .ribbon-svg{height:clamp(90px,24vw,150px)}
+ .ribbon-curve{stroke-width:76}
  .nav-right .btn{display:none}
 }
 @media(max-width:520px){.feature-strip{grid-template-columns:1fr}.feature-note{min-height:112px}.detail-heading{margin-bottom:2rem}.detail-card{min-height:275px}#recipes h2{font-size:clamp(2.5rem,12vw,3.5rem)}}
-@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.ribbon-flow animateTransform{display:none}.reveal{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
